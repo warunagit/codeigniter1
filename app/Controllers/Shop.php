@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Shop extends BaseController
 {
-    public function index(): string
-    {
+    public function index(): string{
         return view('shop');
     }
 
@@ -13,13 +12,12 @@ class Shop extends BaseController
         return view('products');
     }
 
-    public function product($type){
+    public function product($type,$id){
          $data['type'] = $type;
+         $data['id'] = $id;
 
         // Load the view and pass the data
-        return view('product', $data);
-
-       // echo '<h2>The product is '.$type.'</h2>';
-        //return view('product',$data);
+        //echo '<h2>The product type is: '.$type.'. Product id is: '.$id.'</h2>';
+        return view('product',$data);
     }
 }

@@ -1,2 +1,4 @@
 <H2>Product details are here</H2>
-<?=$type ?>
+Type is: <?=$type ?>
+<br/>
+Id is: <?=$id ?>
